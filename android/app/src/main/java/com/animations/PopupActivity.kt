@@ -40,12 +40,15 @@ class PopupActivity:AppCompatActivity() {
         val popupTitle: TextView = findViewById(R.id.popup_title)
         val popupMessage: TextView = findViewById(R.id.popup_message)
         val closeButton: Button = findViewById(R.id.close_button)
+        val openButton: Button = findViewById(R.id.open_button)
         popupMessage.text = message
 
         // Close button functionality
         closeButton.setOnClickListener {
             finish()
             Log.d("PopupAcitivty","Finsih and opening the app $message")
+        }
+        openButton.setOnClickListener {
             openApp()
         }
     }

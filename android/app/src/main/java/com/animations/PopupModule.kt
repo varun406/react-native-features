@@ -20,8 +20,8 @@ class PopupModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaM
 
         val intent = Intent(reactApplicationContext, PopupActivity::class.java)
         intent.putExtra("message", message)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear any previous activity
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  // Ensure activity is launched in a new task
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear any previous activity
 
         reactApplicationContext.startActivity(intent)
 }

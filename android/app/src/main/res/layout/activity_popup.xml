@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="399dp"
-        android:layout_height="57dp"
+        android:layout_height="80dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -26,8 +26,8 @@
             app:srcCompat="@drawable/programmer" />
 
         <LinearLayout
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
+            android:layout_width="246dp"
+            android:layout_height="82dp"
             android:orientation="vertical">
 
             <TextView
@@ -54,27 +54,55 @@
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/popup_message2"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+ 91 7030283264 - VI"
+                android:textAlignment="viewStart"
+                android:textColor="#EFEFEF"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/close_button"
-        android:layout_width="313dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#7CF5FF"
-        android:shadowRadius="15"
-        android:text="View profile" />
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="58dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/popup_message2"
-        android:layout_width="305dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="+ 91 7030283264 - VI"
-        android:textAlignment="viewStart"
-        android:textColor="#EFEFEF"
-        android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/close_button"
+                android:layout_width="144dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#fff"
+                android:shadowRadius="15"
+                android:text="Close"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/open_button"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#7CF5FF"
+                android:shadowRadius="15"
+                android:text="View profile"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
