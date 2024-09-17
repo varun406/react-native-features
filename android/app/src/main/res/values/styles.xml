@@ -6,4 +6,17 @@
         <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
     </style>
 
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog">
+        <!-- Remove the Action Bar -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+        <!-- Set custom enter and exit animations -->
+<!--        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/dialog_exit</item>-->
+
+        <!-- Customize the window background and size -->
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+<!--        <item name="android:windowIsFloating">true</item>-->
+    </style>
 </resources>
