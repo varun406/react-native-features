@@ -1,8 +1,10 @@
 package com.animations
 
+import android.app.KeyguardManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -10,10 +12,28 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+
 class PopupActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+            setShowWhenLocked(true)
+            setTurnScreenOn(true)
+            val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+            keyguardManager.requestDismissKeyguard(this, null)
+
+        }
+//        val win = window
+//        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
+//        win.addFlags(
+//            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+//                    or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+//                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+//        )
+
+
         // Ensure that the correct layout is set
         setContentView(R.layout.activity_popup)  // Make sure this matches your XML file name
 
